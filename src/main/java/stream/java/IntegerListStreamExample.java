@@ -1,13 +1,14 @@
 package stream.java;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import util.PopulateListData;
 
-public class JavaStreamExample {
+import java.util.List;
+
+public class IntegerListStreamExample {
     public static void main(String[] args) {
 
 // DATA
-        List<Integer> INTEGER_LIST = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> INTEGER_LIST = PopulateListData.getIntegerList();
 
 
 //        Example: 1 -> Find even numbers from given ArrayList
