@@ -8,7 +8,7 @@ public class IntegerListStreamExample {
     public static void main(String[] args) {
 
 // DATA
-        List<Integer> INTEGER_LIST = PopulateListData.getIntegerList();
+        List<Integer> INTEGER_LIST = PopulateListData.getIntegerList(); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 //        Example: 1 -> Find even numbers from given ArrayList
