@@ -2,6 +2,7 @@ package stream.java;
 
 import util.PopulateListData;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class StringListStreamExample {
@@ -36,5 +37,24 @@ public class StringListStreamExample {
                 .map(String::toLowerCase)
                 .toList();
         System.out.println("Names in LOWERCASE -> "+lowercaseNamesList); // Names in LOWERCASE -> [sham, ram, john, neha, ajay, karan, neeraj]
+
+// Example: 4 -> Sort name from ArrayList in Ascending Order
+// Expected Output : [Ajay, John, Karan, Neeraj, Neha, Ram, Sham]
+
+        List<String> nameSortedInAscendingOrder = NAME_LIST
+                .stream()
+                .sorted()
+                .toList();
+        System.out.println("Names in Ascending order -> "+nameSortedInAscendingOrder); // Names in Ascending order -> [Ajay, John, Karan, Neeraj, Neha, Ram, Sham]
+
+// Example: 5 -> Sort name from ArrayList in Descending Order
+// Expected Output : [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
+
+        List<String> nameSortedInDescendingOrder = NAME_LIST
+                .stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println("Names in Descending order -> "+nameSortedInDescendingOrder); // Names in Descending order -> [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
+
     }
 }
