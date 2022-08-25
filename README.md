@@ -82,3 +82,44 @@ public class IntegerListStreamExample {
     }
 }
 ```
+
+### Example 5 : Sort number from given ArrayList in Ascending order
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+        List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
+
+// Example: 5 -> Sort number from given ArrayList in Ascending order
+// Expected Output : [1, 2, 3, 4, 5, 6, 9, 10]
+        
+        List<Integer> numberSortedInAscendingOrder = UNSORTED_LIST
+                .stream()
+                .sorted()
+                .toList();
+        System.out.println("Number in Ascending order -> " + numberSortedInAscendingOrder); // Number in Ascending order -> [1, 2, 3, 4, 5, 6, 9, 10]
+    }
+}
+```
+
+
+### Example 6 : Sort number from given ArrayList on descending order
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+        List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
+
+//        Example: 6 -> Sort number from given ArrayList on descending order
+//        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
+        
+        List<Integer> numberSortedInDescendingOrder = UNSORTED_LIST
+                .stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
+    }
+}
+```
