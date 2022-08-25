@@ -16,4 +16,8 @@ public class PopulateListData {
         return List.of(5, 2, 6, 9, 3, 1, 10, 4);
     }
 
+    public static List<String> getNames() {
+        return List.of("Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj");
+    }
+
 }
