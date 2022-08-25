@@ -2,10 +2,10 @@ package stream.java;
 
 import util.PopulateListData;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -13,6 +13,7 @@ public class IntegerListStreamExample {
 // DATA
         List<Integer> INTEGER_LIST = PopulateListData.getIntegerList(); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         List<Integer> DUPLICATE_INTEGER_LIST = PopulateListData.getDuplicateIntegerList(); // 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 8
+        List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
 
 //        Example: 1 -> Find even numbers from given ArrayList
 //        Expected Output : [2, 4, 6, 8, 10]
@@ -51,5 +52,27 @@ public class IntegerListStreamExample {
                 .filter(uniqueSet::add)
                 .toList();
         System.out.println("Unique number -> " + uniqueNumber); // [1, 2, 3, 4, 5, 6, 7, 8]
+
+//        Example: 5 Sort number from given ArrayList in Ascending order
+//        Expected Output : [1, 2, 3, 4, 5, 6, 9, 10]
+        List<Integer> numberSortedInAscendingOrder = UNSORTED_LIST
+                .stream()
+                .sorted()
+                .toList();
+        System.out.println("Number in Ascending order -> " + numberSortedInAscendingOrder); // Number in Ascending order -> [1, 2, 3, 4, 5, 6, 9, 10]
+
+
+//        Example: 6 -> Sort number from given ArrayList on descending order
+//        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
+        List<Integer> numberSortedInDescendingOrder = UNSORTED_LIST
+                .stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
+
+
+
+
+
     }
 }

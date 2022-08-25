@@ -12,4 +12,8 @@ public class PopulateListData {
         return List.of(1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 8);
     }
 
+    public static List<Integer> getListForSorting() {
+        return List.of(5, 2, 6, 9, 3, 1, 10, 4);
+    }
+
 }
