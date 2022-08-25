@@ -125,7 +125,7 @@ public class IntegerListStreamExample {
 ```
 ### Example 7 : Find names start with 'N' in ArrayList
 ```java
-public class IntegerListStreamExample {
+public class StringListStreamExample {
     public static void main(String[] args) {
         
 // DATA
@@ -145,7 +145,7 @@ public class IntegerListStreamExample {
 ```
 ### Example 8 : Converts each name into an UPPERCASE string from ArrayList
 ```java
-public class IntegerListStreamExample {
+public class StringListStreamExample {
     public static void main(String[] args) {
         
 // DATA
@@ -165,7 +165,7 @@ public class IntegerListStreamExample {
 ```
 ### Example 9 : Converts each name into an LOWERCASE string from ArrayList
 ```java
-public class IntegerListStreamExample {
+public class StringListStreamExample {
     public static void main(String[] args) {
         
 // DATA
@@ -185,7 +185,7 @@ public class IntegerListStreamExample {
 ```
 ### Example 10 : Sort name from ArrayList in Ascending Order
 ```java
-public class IntegerListStreamExample {
+public class StringListStreamExample {
     public static void main(String[] args) {
         
 // DATA
@@ -206,7 +206,7 @@ public class IntegerListStreamExample {
 
 ### Example 11 : Sort name from ArrayList in Descending Order
 ```java
-public class IntegerListStreamExample {
+public class StringListStreamExample {
     public static void main(String[] args) {
         
 // DATA
