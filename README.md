@@ -49,7 +49,7 @@ public class IntegerListStreamExample {
 // DATA
         List<Integer> DUPLICATE_INTEGER_LIST = PopulateListData.getDuplicateIntegerList(); // 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 8
         
-// Example: 3 Find duplicate number from given ArrayList
+// Example: 3 -> Find duplicate number from given ArrayList
 // Expected Output : [2, 3, 6, 8]
         
         Set<Integer> duplicateSet = new HashSet<>();
@@ -70,7 +70,7 @@ public class IntegerListStreamExample {
 // DATA
         List<Integer> DUPLICATE_INTEGER_LIST = PopulateListData.getDuplicateIntegerList(); // 1, 2, 2, 3, 3, 4, 5, 6, 6, 7, 8, 8
 
-// Example: 4 Find unique number from given ArrayList
+// Example: 4 -> Find unique number from given ArrayList
 // Expected Output : [1, 2, 3, 4, 5, 6, 7, 8]
         
         Set<Integer> uniqueSet = new HashSet<>();
@@ -112,8 +112,8 @@ public class IntegerListStreamExample {
 // DATA
         List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
 
-//        Example: 6 -> Sort number from given ArrayList on descending order
-//        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
+// Example: 6 -> Sort number from given ArrayList in descending order
+// Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
         
         List<Integer> numberSortedInDescendingOrder = UNSORTED_LIST
                 .stream()
