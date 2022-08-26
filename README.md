@@ -44,7 +44,7 @@ Java-8 Interview Preparation with Examples
 
 | No&nbsp; &nbsp; | Problem Statement                                                                                  |
 |-----------------|----------------------------------------------------------------------------------------------------|
-| DATA            | [ ☑️Employee List Data](#employee-list-data)                                                         |
+| DATA            | [ ☑️Employee List Data](#employee-list-data)                                                       |
 | 1               | [ ✅ Print all employee from IT Department](#employee-example-1)                                    |
 | 2               | [ ✅ Print all employee from IT Department whose salary is greater than 40000](#employee-example-2) |
 | 3               | [ ✅ Print Distinct Department from employee](#employee-example-3)                                  |
