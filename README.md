@@ -240,7 +240,7 @@ public class StringListStreamExample {
 // DATA
         List<String> NAME_LIST = PopulateListData.getNames(); // ["Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj"]
 
-// Example: 7 -> Find names start with 'N' in ArrayList
+// Example: 1 -> Find names start with 'N' in ArrayList
 // Expected Output : [Neha, Neeraj]
 
         List<String> nameStartWith = NAME_LIST
@@ -269,7 +269,7 @@ public class StringListStreamExample {
 // DATA
         List<String> NAME_LIST = PopulateListData.getNames(); // ["Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj"]
         
-// Example: 8 -> converts each name into an UPPERCASE string from ArrayList
+// Example: 2 -> converts each name into an UPPERCASE string from ArrayList
 // Expected Output : [SHAM, RAM, JOHN, NEHA, AJAY, KARAN, NEERAJ]
 
         List<String> uppercaseNamesList = NAME_LIST
@@ -298,7 +298,7 @@ public class StringListStreamExample {
 // DATA
         List<String> NAME_LIST = PopulateListData.getNames(); // ["Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj"]
         
-// Example: 9 -> converts each name into an LOWERCASE string from ArrayList
+// Example: 3 -> converts each name into an LOWERCASE string from ArrayList
 // Expected Output : [sham, ram, john, neha, ajay, karan, neeraj]
 
         List<String> lowercaseNamesList = NAME_LIST
@@ -327,7 +327,7 @@ public class StringListStreamExample {
 // DATA
         List<String> NAME_LIST = PopulateListData.getNames(); // ["Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj"]
 
-// Example: 10 -> Sort name from ArrayList in Ascending Order
+// Example: 4 -> Sort name from ArrayList in Ascending Order
 // Expected Output : [Ajay, John, Karan, Neeraj, Neha, Ram, Sham]
 
         List<String> nameSortedInAscendingOrder = NAME_LIST
@@ -356,7 +356,7 @@ public class StringListStreamExample {
 // DATA
         List<String> NAME_LIST = PopulateListData.getNames(); // ["Sham", "Ram", "John", "Neha", "Ajay", "Karan", "Neeraj"]
 
-// Example: 11 -> Sort name from ArrayList in Descending Order
+// Example: 5 -> Sort name from ArrayList in Descending Order
 // Expected Output : [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
 
         List<String> nameSortedInDescendingOrder = NAME_LIST
