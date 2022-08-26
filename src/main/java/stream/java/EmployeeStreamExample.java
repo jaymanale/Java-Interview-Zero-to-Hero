@@ -3,6 +3,8 @@ package stream.java;
 import util.PopulateEmployeeData;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -47,5 +49,32 @@ public class EmployeeStreamExample {
 //            Employee{id=4, name='Geeta', department='IT', age=32, salary=80000}
 //            Employee{id=5, name='Harsh', department='IT', age=29, salary=50000}
 
+        System.out.println("------------------------------------------------------");
+
+// Example: 3 -> Print Distinct Department from employee
+        EMPLOYEE_LIST
+                .stream()
+                .map(Employee::getDepartment)
+                .distinct()
+                .forEach(System.out::println);
+
+//        IT
+//        ADMIN
+//        HR
+
+        System.out.println("------------------------------------------------------");
+
+// Example: 4 -> print employee from each department
+
+        Map<String, Long> employeeInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+
+        employeeInEachDepartment
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+//        HR -> 3
+//        ADMIN -> 2
+//        IT -> 5
     }
 }
