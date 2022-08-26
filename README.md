@@ -370,3 +370,50 @@ public class EmployeeStreamExample {
     }
 }
 ```
+
+### Example 16 : Find Average age of Male and Female employee
+```java
+public class EmployeeStreamExample {
+    public static void main(String[] args) {
+
+// DATA
+        List<Employee> EMPLOYEE_LIST = PopulateEmployeeData.getEmployeeData();
+
+// Example: 5 -> Find Average age of Male and Female employee
+
+        Map<String, Double> averageAgeByGender = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getAge)));
+        averageAgeByGender
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+// OUTPUT : 👇
+//        Female -> 27.75
+//        Male -> 27.5
+    }
+}
+```
+
+### Example 17 : Find employee with highest paid salary in each department
+```java
+public class EmployeeStreamExample {
+    public static void main(String[] args) {
+
+// DATA
+        List<Employee> EMPLOYEE_LIST = PopulateEmployeeData.getEmployeeData();
+
+// Example: 6 -> Find employee with highest paid salary in each department
+
+        Map<String, Optional<Employee>> highestSalaryInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.maxBy(Comparator.comparingInt(Employee::getSalary))));
+        highestSalaryInEachDepartment
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+// OUTPUT : 👇
+//        HR -> Optional[Employee {id=9, name='Aishwarya', department='HR', age=28, salary=60000}]
+//        ADMIN -> Optional[Employee {id=7, name='Neeraj', department='ADMIN', age=27, salary=55000}]
+//        IT -> Optional[Employee {id=4, name='Geeta', department='IT', age=32, salary=80000}]
+    }
+}
+```

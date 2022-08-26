@@ -93,7 +93,7 @@ public class EmployeeStreamExample {
 
         System.out.println("------------------------------------------------------");
 
-// Example: 5 -> Find employee with highest salary paid in each department
+// Example: 6 -> Find employee with highest paid salary in each department
 
         Map<String, Optional<Employee>> highestSalaryInEachDepartment = EMPLOYEE_LIST
                 .stream()
