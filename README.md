@@ -16,7 +16,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .filter(number -> number % 2 == 0)
                 .toList();
-        System.out.println("Even Number -> " + evenNumberList); // Even Number -> [2, 4, 6, 8, 10]
+        System.out.println("Even Number -> " + evenNumberList);
+
+// OUTPUT : 👇
+// Even Number -> [2, 4, 6, 8, 10]
     }
 }
 ```
@@ -35,7 +38,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .filter(number -> number % 2 != 0)
                 .toList();
-        System.out.println("Odd Number -> " + oddNumberList); // Odd Number -> [1, 3, 5, 7, 9]
+        System.out.println("Odd Number -> " + oddNumberList);
+
+// OUTPUT : 👇
+// Odd Number -> [1, 3, 5, 7, 9]
     }
 }
 
@@ -57,7 +63,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .filter(number -> !duplicateSet.add(number))
                 .toList();
-        System.out.println("Duplicate number -> " + duplicateNumber); // Duplicate number -> [2, 3, 6, 8]
+        System.out.println("Duplicate number -> " + duplicateNumber);
+
+// OUTPUT : 👇        
+// Duplicate number -> [2, 3, 6, 8]
     }
 }
 ```
@@ -78,7 +87,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .filter(uniqueSet::add)
                 .toList();
-        System.out.println("Unique number -> " + uniqueNumber); // Unique number -> [1, 2, 3, 4, 5, 6, 7, 8]
+        System.out.println("Unique number -> " + uniqueNumber);
+
+// OUTPUT : 👇        
+// Unique number -> [1, 2, 3, 4, 5, 6, 7, 8]
     }
 }
 ```
@@ -98,7 +110,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .sorted()
                 .toList();
-        System.out.println("Number in Ascending order -> " + numberSortedInAscendingOrder); // Number in Ascending order -> [1, 2, 3, 4, 5, 6, 9, 10]
+        System.out.println("Number in Ascending order -> " + numberSortedInAscendingOrder);
+
+// OUTPUT : 👇        
+// Number in Ascending order -> [1, 2, 3, 4, 5, 6, 9, 10]
     }
 }
 ```
@@ -119,7 +134,10 @@ public class IntegerListStreamExample {
                 .stream()
                 .sorted(Comparator.reverseOrder())
                 .toList();
-        System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
+        System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder);
+
+// OUTPUT : 👇        
+// Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
     }
 }
 ```
@@ -138,7 +156,10 @@ public class StringListStreamExample {
                 .stream()
                 .filter(name -> name.startsWith("N"))
                 .toList();
-        System.out.println("Name start with 'N' -> " + nameStartWith); // Name start with 'N' -> [Neha, Neeraj]
+        System.out.println("Name start with 'N' -> " + nameStartWith);
+
+// OUTPUT : 👇        
+// Name start with 'N' -> [Neha, Neeraj]
 
     }
 }
@@ -158,7 +179,10 @@ public class StringListStreamExample {
                 .stream()
                 .map(String::toUpperCase)
                 .toList();
-        System.out.println("Names in UPPERCASE -> "+uppercaseNamesList); // Names in UPPERCASE -> [SHAM, RAM, JOHN, NEHA, AJAY, KARAN, NEERAJ]
+        System.out.println("Names in UPPERCASE -> "+uppercaseNamesList);
+
+// OUTPUT : 👇        
+// Names in UPPERCASE -> [SHAM, RAM, JOHN, NEHA, AJAY, KARAN, NEERAJ]
 
     }
 }
@@ -178,7 +202,10 @@ public class StringListStreamExample {
                 .stream()
                 .map(String::toLowerCase)
                 .toList();
-        System.out.println("Names in LOWERCASE -> "+lowercaseNamesList); // Names in LOWERCASE -> [sham, ram, john, neha, ajay, karan, neeraj]
+        System.out.println("Names in LOWERCASE -> "+lowercaseNamesList);
+
+// OUTPUT : 👇        
+// Names in LOWERCASE -> [sham, ram, john, neha, ajay, karan, neeraj]
 
     }
 }
@@ -198,7 +225,10 @@ public class StringListStreamExample {
                 .stream()
                 .sorted()
                 .toList();
-        System.out.println("Names in Ascending order -> "+nameSortedInAscendingOrder); // Names in Ascending order -> [Ajay, John, Karan, Neeraj, Neha, Ram, Sham]
+        System.out.println("Names in Ascending order -> "+nameSortedInAscendingOrder);
+
+// OUTPUT : 👇        
+// Names in Ascending order -> [Ajay, John, Karan, Neeraj, Neha, Ram, Sham]
 
     }
 }
@@ -219,7 +249,10 @@ public class StringListStreamExample {
                 .stream()
                 .sorted(Comparator.reverseOrder())
                 .toList();
-        System.out.println("Names in Descending order -> "+nameSortedInDescendingOrder); // Names in Descending order -> [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
+        System.out.println("Names in Descending order -> "+nameSortedInDescendingOrder);
+
+// OUTPUT : 👇        
+// Names in Descending order -> [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
 
     }
 }
@@ -253,6 +286,7 @@ public class EmployeeStreamExample {
                 .stream()
                 .filter(employee -> employee.getDepartment().equals("IT"))
                 .forEach(System.out::println);
+
 // OUTPUT : 👇
 //            Employee{id=1, name='Sham', department='IT', age=25, salary=30000}
 //            Employee{id=2, name='Karan', department='IT', age=27, salary=60000}
@@ -302,6 +336,7 @@ public class EmployeeStreamExample {
                 .map(Employee::getDepartment)
                 .distinct()
                 .forEach(System.out::println);
+
 // OUTPUT : 👇
 //        IT
 //        ADMIN
@@ -327,6 +362,7 @@ public class EmployeeStreamExample {
 
         employeeInEachDepartment
                 .forEach((key, value) -> System.out.println(key + " -> " + value));
+
 // OUTPUT : 👇
 //        HR -> 3
 //        ADMIN -> 2
