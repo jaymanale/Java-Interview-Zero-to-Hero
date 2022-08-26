@@ -287,4 +287,50 @@ public class EmployeeStreamExample {
 }
 
 ```
-       
+
+### Example 14 : Print Distinct Department from employee
+```java
+public class EmployeeStreamExample {
+    public static void main(String[] args) {
+
+// DATA
+        List<Employee> EMPLOYEE_LIST = PopulateEmployeeData.getEmployeeData();
+
+// Example: 3 -> Print Distinct Department from employee
+        EMPLOYEE_LIST
+                .stream()
+                .map(Employee::getDepartment)
+                .distinct()
+                .forEach(System.out::println);
+
+//        IT
+//        ADMIN
+//        HR
+    }
+}
+```
+
+
+### Example 15 : Print No of employee from each department
+```java
+public class EmployeeStreamExample {
+    public static void main(String[] args) {
+
+// DATA
+        List<Employee> EMPLOYEE_LIST = PopulateEmployeeData.getEmployeeData();
+
+// Example: 4 -> Print No of employee from each department
+
+        Map<String, Long> employeeInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+
+        employeeInEachDepartment
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+//        HR -> 3
+//        ADMIN -> 2
+//        IT -> 5
+    }
+}
+```
