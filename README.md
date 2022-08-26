@@ -302,7 +302,7 @@ public class EmployeeStreamExample {
                 .map(Employee::getDepartment)
                 .distinct()
                 .forEach(System.out::println);
-
+// OUTPUT : 👇
 //        IT
 //        ADMIN
 //        HR
@@ -327,7 +327,7 @@ public class EmployeeStreamExample {
 
         employeeInEachDepartment
                 .forEach((key, value) -> System.out.println(key + " -> " + value));
-
+// OUTPUT : 👇
 //        HR -> 3
 //        ADMIN -> 2
 //        IT -> 5
