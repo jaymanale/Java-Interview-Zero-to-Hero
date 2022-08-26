@@ -2,8 +2,10 @@ package stream.java;
 
 import util.PopulateEmployeeData;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class EmployeeStreamExample {
@@ -76,5 +78,31 @@ public class EmployeeStreamExample {
 //        HR -> 3
 //        ADMIN -> 2
 //        IT -> 5
+        System.out.println("------------------------------------------------------");
+
+// Example: 5 -> Find Average age of Male and Female employee
+
+        Map<String, Double> averageAgeByGender = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getAge)));
+        averageAgeByGender
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+//        Female -> 27.75
+//        Male -> 27.5
+
+        System.out.println("------------------------------------------------------");
+
+// Example: 5 -> Find employee with highest salary paid in each department
+
+        Map<String, Optional<Employee>> highestSalaryInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.maxBy(Comparator.comparingInt(Employee::getSalary))));
+        highestSalaryInEachDepartment
+                .forEach((key, value) -> System.out.println(key + " -> " + value));
+
+//        HR -> Optional[Employee {id=9, name='Aishwarya', department='HR', age=28, salary=60000}]
+//        ADMIN -> Optional[Employee {id=7, name='Neeraj', department='ADMIN', age=27, salary=55000}]
+//        IT -> Optional[Employee {id=4, name='Geeta', department='IT', age=32, salary=80000}]
     }
 }
