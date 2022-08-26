@@ -1,7 +1,66 @@
-# Java-8
+
+# <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" /> - Java Interview Preparation with Examples
+
+
 Java-8 Interview Preparation with Examples
 
-### Example 1 : Find even numbers from given ArrayList
+## Table of Contents
+
+> 1️⃣ Stream
+- [👉 Integer](#integer)
+- [👉 String](#string)
+- [👉 Employee](#employee)
+
+## Integer
+
+| No&nbsp; &nbsp; | Problem Statement                                                             |
+|-----------------|-------------------------------------------------------------------------------|
+| 1               | [ ✅ Find even numbers from given ArrayList](#integer-example-1)               |
+| 2               | [ ✅ Find odd numbers from given ArrayList](#integer-example-2)                |
+| 3               | [ ✅ Find duplicate number from given ArrayList](#integer-example-3)           |
+| 4               | [ ✅ Find unique number from given ArrayList](#integer-example-4)              |
+| 5               | [ ✅ Sort number from given ArrayList in Ascending order](#integer-example-5)  |
+| 6               | [ ✅ Sort number from given ArrayList on descending order](#integer-example-6) |
+ 
+<div>
+    <b><a href="#table-of-contents">👆 Back To Top</a></b>
+</div>
+
+## String
+
+| No&nbsp; &nbsp; | Problem Statement                                                                  |
+|-----------------|------------------------------------------------------------------------------------|
+| 1               | [ ✅ Find names start with 'N' in ArrayList](#string-example-1)                     |
+| 2               | [ ✅ Converts each name into an UPPERCASE string from ArrayList](#string-example-2) |
+| 3               | [ ✅ Converts each name into an LOWERCASE string from ArrayList](#string-example-3) |
+| 4               | [ ✅ Sort name from ArrayList in Ascending Order](#string-example-4)                |
+| 5               | [ ✅ Sort name from ArrayList in Descending Order](#string-example-5)               |
+
+<div>
+    <b><a href="#table-of-contents">👆 Back To Top</a></b>
+</div>
+
+## Employee
+
+| No&nbsp; &nbsp; | Problem Statement                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| DATA            | [ ☑️Employee List Data](#employee-list-data)                                                         |
+| 1               | [ ✅ Print all employee from IT Department](#employee-example-1)                                    |
+| 2               | [ ✅ Print all employee from IT Department whose salary is greater than 40000](#employee-example-2) |
+| 3               | [ ✅ Print Distinct Department from employee](#employee-example-3)                                  |
+| 4               | [ ✅ Print No of employee from each department](#employee-example-4)                                |
+| 5               | [ ✅ Find Average age of Male and Female employee](#employee-example-5)                             |
+| 6               | [ ✅ Find employee with highest paid salary in each department](#employee-example-6)                |
+
+
+<div>
+    <b><a href="#table-of-contents">👆 Back To Top</a></b>
+</div>
+
+
+
+#### Integer Example 1
+>Find even numbers from given ArrayList
  ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -23,7 +82,13 @@ public class IntegerListStreamExample {
     }
 }
 ```
-### Example 2 : Find odd numbers from given ArrayList
+
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+#### Integer Example 2
+>Find odd numbers from given ArrayList
 ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -44,10 +109,14 @@ public class IntegerListStreamExample {
 // Odd Number -> [1, 3, 5, 7, 9]
     }
 }
-
 ```
 
-### Example 3 : Find duplicate number from given ArrayList
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+#### Integer Example 3
+>Find duplicate number from given ArrayList
 ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -71,7 +140,13 @@ public class IntegerListStreamExample {
 }
 ```
 
-### Example 4 : Find unique number from given ArrayList
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+
+#### Integer Example 4
+>Find unique number from given ArrayList
 ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -95,7 +170,13 @@ public class IntegerListStreamExample {
 }
 ```
 
-### Example 5 : Sort number from given ArrayList in Ascending order
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+
+#### Integer Example 5
+>Sort number from given ArrayList in Ascending order
 ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -118,8 +199,12 @@ public class IntegerListStreamExample {
 }
 ```
 
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
 
-### Example 6 : Sort number from given ArrayList on descending order
+#### Integer Example 6
+>Sort number from given ArrayList on descending order
 ```java
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -141,7 +226,13 @@ public class IntegerListStreamExample {
     }
 }
 ```
-### Example 7 : Find names start with 'N' in ArrayList
+
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+#### String Example 1
+>Find names start with 'N' in ArrayList
 ```java
 public class StringListStreamExample {
     public static void main(String[] args) {
@@ -164,7 +255,13 @@ public class StringListStreamExample {
     }
 }
 ```
-### Example 8 : Converts each name into an UPPERCASE string from ArrayList
+
+<div align="right">
+    <b><a href="#string">👆 Back To String</a></b>
+</div>
+
+#### String Example 2
+>Converts each name into an UPPERCASE string from ArrayList
 ```java
 public class StringListStreamExample {
     public static void main(String[] args) {
@@ -187,7 +284,13 @@ public class StringListStreamExample {
     }
 }
 ```
-### Example 9 : Converts each name into an LOWERCASE string from ArrayList
+
+<div align="right">
+    <b><a href="#string">👆 Back To String</a></b>
+</div>
+
+#### String Example 3
+>Converts each name into an LOWERCASE string from ArrayList
 ```java
 public class StringListStreamExample {
     public static void main(String[] args) {
@@ -210,7 +313,13 @@ public class StringListStreamExample {
     }
 }
 ```
-### Example 10 : Sort name from ArrayList in Ascending Order
+
+<div align="right">
+    <b><a href="#string">👆 Back To String</a></b>
+</div>
+
+#### String Example 4
+>Sort name from ArrayList in Ascending Order
 ```java
 public class StringListStreamExample {
     public static void main(String[] args) {
@@ -234,7 +343,12 @@ public class StringListStreamExample {
 }
 ```
 
-### Example 11 : Sort name from ArrayList in Descending Order
+<div align="right">
+    <b><a href="#string">👆 Back To String</a></b>
+</div>
+
+#### String Example 5
+>Sort name from ArrayList in Descending Order
 ```java
 public class StringListStreamExample {
     public static void main(String[] args) {
@@ -257,22 +371,37 @@ public class StringListStreamExample {
     }
 }
 ```
-### Employee Data - EMPLOYEE_LIST
+
+<div align="right">
+    <b><a href="#string">👆 Back To String</a></b>
+</div>
+
+#### Employee List Data
 ```java
-//        Employee {id=1, name='Sham', department='IT', age=25, salary=30000}
-//        Employee {id=2, name='Karan', department='IT', age=27, salary=60000}
-//        Employee {id=3, name='Priyanka', department='IT', age=25, salary=35000}
-//        Employee {id=4, name='Geeta', department='IT', age=32, salary=80000}
-//        Employee {id=5, name='Harsh', department='IT', age=29, salary=50000}
-//        Employee {id=6, name='Ram', department='ADMIN', age=27, salary=35000}
-//        Employee {id=7, name='Neeraj', department='ADMIN', age=27, salary=55000}
-//        Employee {id=8, name='Sujata', department='HR', age=26, salary=50000}
-//        Employee {id=9, name='Aishwarya', department='HR', age=28, salary=60000}
-//        Employee {id=10, name='Suresh', department='HR', age=30, salary=40000}
+public class PopulateEmployeeData {
+
+    List<Employee> EMPLOYEE_LIST = List.of(
+            new Employee(1, "Sham", "IT", 25, 30000, "Male"),
+            new Employee(2, "Karan", "IT", 27, 60000, "Male"),
+            new Employee(3, "Priyanka", "IT", 25, 35000, "Female"),
+            new Employee(4, "Geeta", "IT", 32, 80000, "Female"),
+            new Employee(5, "Harsh", "IT", 29, 50000, "Male"),
+            new Employee(6, "Ram", "ADMIN", 27, 35000, "Male"),
+            new Employee(7, "Neeraj", "ADMIN", 27, 55000, "Male"),
+            new Employee(8, "Sujata", "HR", 26, 50000, "Female"),
+            new Employee(9, "Aishwarya", "HR", 28, 60000, "Female"),
+            new Employee(10, "Suresh", "HR", 30, 40000, "Male")
+    );
+}
 
 ```
 
-### Example 12 : Print all employee from IT Department
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
+
+#### Employee Example 1
+>Print all employee from IT Department
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -296,8 +425,12 @@ public class EmployeeStreamExample {
     }
 }
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
 
-### Example 13 : Print all employee from IT Department whose salary is greater than 40000
+#### Employee Example 2
+>Print all employee from IT Department whose salary is greater than 40000
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -319,10 +452,14 @@ public class EmployeeStreamExample {
 
     }
 }
-
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
 
-### Example 14 : Print Distinct Department from employee
+
+#### Employee Example 3
+>Print Distinct Department from employee
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -344,9 +481,12 @@ public class EmployeeStreamExample {
     }
 }
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
 
-
-### Example 15 : Print No of employee from each department
+#### Employee Example 4
+>Print No of employee from each department
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -370,8 +510,12 @@ public class EmployeeStreamExample {
     }
 }
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
 
-### Example 16 : Find Average age of Male and Female employee
+#### Employee Example 5
+>Find Average age of Male and Female employee
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -393,8 +537,12 @@ public class EmployeeStreamExample {
     }
 }
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
 
-### Example 17 : Find employee with highest paid salary in each department
+#### Employee Example 6 
+>Find employee with highest paid salary in each department
 ```java
 public class EmployeeStreamExample {
     public static void main(String[] args) {
@@ -417,3 +565,6 @@ public class EmployeeStreamExample {
     }
 }
 ```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
