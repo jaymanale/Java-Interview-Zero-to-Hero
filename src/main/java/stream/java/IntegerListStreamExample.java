@@ -2,10 +2,7 @@ package stream.java;
 
 import util.PopulateListData;
 
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class IntegerListStreamExample {
     public static void main(String[] args) {
@@ -70,9 +67,10 @@ public class IntegerListStreamExample {
                 .toList();
         System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
 
+//        Example: 7 -> sum of all given number
+//        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
 
-
-
-
+        Optional<Integer> sumOfAllNumber = INTEGER_LIST.stream().reduce(Integer::sum);
+        System.out.println("Sum Of all Numbers -> "+sumOfAllNumber);
     }
 }
