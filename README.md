@@ -21,7 +21,8 @@ Java-8 Interview Preparation with Examples
 | 4               | [ ✅ Find unique number from given ArrayList](#integer-example-4)              |
 | 5               | [ ✅ Sort number from given ArrayList in Ascending order](#integer-example-5)  |
 | 6               | [ ✅ Sort number from given ArrayList on descending order](#integer-example-6) |
- 
+| 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
+
 <div>
     <b><a href="#table-of-contents">👆 Back To Top</a></b>
 </div>
@@ -230,6 +231,33 @@ public class IntegerListStreamExample {
 <div align="right">
     <b><a href="#integer">👆 Back To Integer</a></b>
 </div>
+
+
+#### Integer Example 7
+>Sum of all given number in ArrayList
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+        List<Integer> INTEGER_LIST = PopulateListData.getIntegerList(); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// Example: 7 -> Sum of all given number in ArrayList
+// Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
+
+        Optional<Integer> sumOfAllNumber = INTEGER_LIST.stream().reduce(Integer::sum);
+        System.out.println("Sum Of all Numbers -> "+sumOfAllNumber);
+
+// OUTPUT : 👇        
+// Sum Of all Numbers -> Optional[55]
+    }
+}
+```
+
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
 
 #### String Example 1
 >Find names start with 'N' in ArrayList

@@ -67,7 +67,7 @@ public class IntegerListStreamExample {
                 .toList();
         System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
 
-//        Example: 7 -> sum of all given number
+//        Example: 7 -> Sum of all given number in ArrayList
 //        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
 
         Optional<Integer> sumOfAllNumber = INTEGER_LIST.stream().reduce(Integer::sum);
