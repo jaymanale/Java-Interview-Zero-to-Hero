@@ -275,9 +275,8 @@ public class IntegerListStreamExample {
 //  Example: 8 -> find the largest/Max number from ArrayList
 // Expected Output : 10
 
-        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Comparator.comparingInt(value -> value));
+        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Integer::compare);
         largestNumber.ifPresent(integer -> System.out.println("Largest Number -> " + integer)); 
-
 
 // OUTPUT : 👇        
 // Largest Number -> 10
