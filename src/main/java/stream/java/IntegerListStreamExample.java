@@ -77,8 +77,14 @@ public class IntegerListStreamExample {
 //  Example: 8 -> find the largest/Max number from ArrayList
 // Expected Output : 10
 
-        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Comparator.comparingInt(value -> value));
+        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Integer::compare);
         largestNumber.ifPresent(integer -> System.out.println("Largest Number -> " + integer)); // Largest Number -> 10
+
+//  Example: 9 -> find the Smallest/Min number from ArrayList
+// Expected Output : 1
+
+        Optional<Integer> smallestNumber = UNSORTED_LIST.stream().min(Integer::compare);
+        smallestNumber.ifPresent(integer -> System.out.println("Smallest number -> " + integer)); // Smallest number -> 1
 
 
     }
