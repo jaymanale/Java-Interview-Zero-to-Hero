@@ -20,7 +20,7 @@ Java-8 Interview Preparation with Examples
 | 3               | [ ✅ Find duplicate number from given ArrayList](#integer-example-3)           |
 | 4               | [ ✅ Find unique number from given ArrayList](#integer-example-4)              |
 | 5               | [ ✅ Sort number from given ArrayList in Ascending order](#integer-example-5)  |
-| 6               | [ ✅ Sort number from given ArrayList on descending order](#integer-example-6) |
+| 6               | [ ✅ Sort number from given ArrayList in descending order](#integer-example-6) |
 | 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
 | 8               | [ ✅ Find the largest/Max number from ArrayList](#integer-example-8)           |
 | 9               | [ ✅ find the Smallest/Min number from ArrayList](#integer-example-9)          |
@@ -49,14 +49,14 @@ Java-8 Interview Preparation with Examples
 
 | No&nbsp; &nbsp; | Problem Statement                                                                                  |
 |-----------------|----------------------------------------------------------------------------------------------------|
-| DATA            | [ ☑️Employee List Data](#employee-list-data)                                                       |
+| DATA            | [ ☑️ Employee List Data](#employee-list-data)                                                      |
 | 1               | [ ✅ Print all employee from IT Department](#employee-example-1)                                    |
 | 2               | [ ✅ Print all employee from IT Department whose salary is greater than 40000](#employee-example-2) |
 | 3               | [ ✅ Print Distinct Department from employee](#employee-example-3)                                  |
 | 4               | [ ✅ Print No of employee from each department](#employee-example-4)                                |
 | 5               | [ ✅ Find Average age of Male and Female employee](#employee-example-5)                             |
 | 6               | [ ✅ Find employee with highest paid salary in each department](#employee-example-6)                |
-
+| 7               | [ ✅ Find employee with lowest paid salary in each department](#employee-example-7)                 |
 
 <div>
     <b><a href="#table-of-contents">👆 Back To Top</a></b>
@@ -648,6 +648,34 @@ public class EmployeeStreamExample {
 //        HR -> Optional[Employee {id=9, name='Aishwarya', department='HR', age=28, salary=60000}]
 //        ADMIN -> Optional[Employee {id=7, name='Neeraj', department='ADMIN', age=27, salary=55000}]
 //        IT -> Optional[Employee {id=4, name='Geeta', department='IT', age=32, salary=80000}]
+    }
+}
+```
+<div align="right">
+    <b><a href="#employee">👆 Back To Employee</a></b>
+</div>
+
+
+#### Employee Example 7
+>Find employee with lowest paid salary in each department
+```java
+public class EmployeeStreamExample {
+    public static void main(String[] args) {
+
+// DATA
+        List<Employee> EMPLOYEE_LIST = PopulateEmployeeData.getEmployeeData();
+        
+// Example: 7 -> Find employee with lowest paid salary in each department
+
+        Map<String, Optional<Employee>> lowestSalaryInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.minBy(Comparator.comparingInt(Employee::getSalary))));
+        lowestSalaryInEachDepartment.forEach((key, value) -> System.out.println(key + " -> "+ value));
+
+//        HR -> Optional[Employee {id=10, name='Suresh', department='HR', age=30, salary=40000}]
+//        ADMIN -> Optional[Employee {id=6, name='Ram', department='ADMIN', age=27, salary=35000}]
+//        IT -> Optional[Employee {id=1, name='Sham', department='IT', age=25, salary=30000}]
+
     }
 }
 ```
