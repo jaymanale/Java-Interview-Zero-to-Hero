@@ -23,6 +23,9 @@ Java-8 Interview Preparation with Examples
 | 6               | [ ✅ Sort number from given ArrayList on descending order](#integer-example-6) |
 | 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
 | 8               | [ ✅ Find the largest/Max number from ArrayList](#integer-example-8)           |
+| 9               | [ ✅ find the Smallest/Min number from ArrayList](#integer-example-9)          |
+
+
 
 <div>
     <b><a href="#table-of-contents">👆 Back To Top</a></b>
@@ -285,6 +288,34 @@ public class IntegerListStreamExample {
 <div align="right">
     <b><a href="#integer">👆 Back To Integer</a></b>
 </div>
+
+
+#### Integer Example 9
+>find the Smallest/Min number from ArrayList
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+        List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
+
+//  Example: 9 -> find the Smallest/Min number from ArrayList
+// Expected Output : 1
+
+        Optional<Integer> smallestNumber = UNSORTED_LIST.stream().min(Integer::compare);
+        smallestNumber.ifPresent(integer -> System.out.println("Smallest number -> " + integer)); // Smallest number -> 1
+        
+
+// OUTPUT : 👇        
+// Smallest number -> 1
+    }
+}
+```
+
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
 
 
 #### String Example 1
