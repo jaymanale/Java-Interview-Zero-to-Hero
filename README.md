@@ -22,6 +22,7 @@ Java-8 Interview Preparation with Examples
 | 5               | [ ✅ Sort number from given ArrayList in Ascending order](#integer-example-5)  |
 | 6               | [ ✅ Sort number from given ArrayList on descending order](#integer-example-6) |
 | 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
+| 8               | [ ✅ Find the largest/Max number from ArrayList](#integer-example-8)           |
 
 <div>
     <b><a href="#table-of-contents">👆 Back To Top</a></b>
@@ -250,6 +251,33 @@ public class IntegerListStreamExample {
 
 // OUTPUT : 👇        
 // Sum Of all Numbers -> Optional[55]
+    }
+}
+```
+
+<div align="right">
+    <b><a href="#integer">👆 Back To Integer</a></b>
+</div>
+
+
+#### Integer Example 8
+>find the largest/Max number from ArrayList
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+        List<Integer> UNSORTED_LIST = PopulateListData.getListForSorting(); // [5, 2, 6, 9, 3, 1, 10, 4]
+
+//  Example: 8 -> find the largest/Max number from ArrayList
+// Expected Output : 10
+
+        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Comparator.comparingInt(value -> value));
+        largestNumber.ifPresent(integer -> System.out.println("Largest Number -> " + integer)); 
+
+
+// OUTPUT : 👇        
+// Largest Number -> 10
     }
 }
 ```
