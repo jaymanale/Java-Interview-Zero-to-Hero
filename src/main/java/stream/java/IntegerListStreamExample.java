@@ -67,10 +67,19 @@ public class IntegerListStreamExample {
                 .toList();
         System.out.println("Number in Descending order -> " + numberSortedInDescendingOrder); // Number in Descending order -> [10, 9, 6, 5, 4, 3, 2, 1]
 
-//        Example: 7 -> Sum of all given number in ArrayList
-//        Expected Output : [10, 9, 6, 5, 4, 3, 2, 1]
+// Example: 7 -> Sum of all given number in ArrayList
+// Expected Output : 55
 
         Optional<Integer> sumOfAllNumber = INTEGER_LIST.stream().reduce(Integer::sum);
-        System.out.println("Sum Of all Numbers -> "+sumOfAllNumber);
+        sumOfAllNumber.ifPresent(integer -> System.out.println("Sum Of all Numbers -> " + integer)); // Sum Of all Numbers -> 55
+
+
+//  Example: 8 -> find the largest/Max number from ArrayList
+// Expected Output : 10
+
+        Optional<Integer> largestNumber = UNSORTED_LIST.stream().max(Comparator.comparingInt(value -> value));
+        largestNumber.ifPresent(integer -> System.out.println("Largest Number -> " + integer)); // Largest Number -> 10
+
+
     }
 }
