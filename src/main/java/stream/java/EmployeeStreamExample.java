@@ -104,5 +104,19 @@ public class EmployeeStreamExample {
 //        HR -> Optional[Employee {id=9, name='Aishwarya', department='HR', age=28, salary=60000}]
 //        ADMIN -> Optional[Employee {id=7, name='Neeraj', department='ADMIN', age=27, salary=55000}]
 //        IT -> Optional[Employee {id=4, name='Geeta', department='IT', age=32, salary=80000}]
+
+        System.out.println("------------------------------------------------------");
+
+// Example: 7 -> Find employee with lowest paid salary in each department
+
+        Map<String, Optional<Employee>> lowestSalaryInEachDepartment = EMPLOYEE_LIST
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.minBy(Comparator.comparingInt(Employee::getSalary))));
+        lowestSalaryInEachDepartment.forEach((key, value) -> System.out.println(key + " -> "+ value));
+
+//        HR -> Optional[Employee {id=10, name='Suresh', department='HR', age=30, salary=40000}]
+//        ADMIN -> Optional[Employee {id=6, name='Ram', department='ADMIN', age=27, salary=35000}]
+//        IT -> Optional[Employee {id=1, name='Sham', department='IT', age=25, salary=30000}]
+
     }
 }
