@@ -2,14 +2,66 @@
 # <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" /> - Java Interview Preparation with Examples
 
 
-Java-8 Interview Preparation with Examples
+Java Interview Preparation
 
 ## Table of Contents
 
-> 1️⃣ Stream
+### Core Java
+- [Q.1 Why Java is not 100% Object Oriented?](#q1-why-java-is-not-100-object-oriented)
+- [Q.2 Is Java Pass by value or Pass by reference?](#q2-is-java-pass-by-value-or-pass-by-reference)
+- [Q.3 Why Pointers are not used in Java?](#q3-why-pointers-are-not-used-in-java)
+
+## Stream API Examples
 - [👉 Integer](#integer)
 - [👉 String](#string)
 - [👉 Employee](#employee)
+
+
+## Core Java
+### Q.1 Why Java is not 100% Object Oriented?
+
+- **Primitive Data Types:** In Java, primitive data types such as int, float, boolean, byte, char, double, long, and short are not objects. They do not inherit from a common superclass and cannot have methods or fields like objects. Java offers wrapper classes (e.g., Integer, Double) to encapsulate primitives for compatibility with object-oriented contexts. However, this adds complexity to its type system.
+- **Static Members and Methods:** Java allows the declaration of static members (fields and methods) within classes. Static members belong to the class itself rather than any instance of the class, and they can be accessed without creating an object of the class.
+- **Lack of Multiple Inheritance:** Java does not support multiple inheritance of classes, meaning a class cannot extend more than one class. This limitation was imposed to avoid the complexities associated with multiple inheritance, such as the diamond problem. Instead, Java provides interfaces as a mechanism for achieving some benefits of multiple inheritance through abstract types.
+
+### Q.2 Is Java Pass by value or Pass by reference?
+
+- Java is pass-by-value. In Java, when we pass a variable to a method, we're passing a copy of the variable's value.
+- In Java, when we pass an object as an argument to a method, we're still passing the value of the **reference to the object, not the object itself.** This means the method receives a copy of the reference to the object, not a copy of the object.
+```java
+public class Main {
+    public static void main(String[] args) {
+      // For Variable
+      int num = 10;
+      System.out.println("Before: " + num);
+      modifyValue(num);
+      System.out.println("After: " + num);
+
+      // For Objects
+      Employee employee= new Employee();
+      employee.setName("Jayram");
+      System.out.println(employee);
+      modifyObject(employee);
+    }
+
+    public static void modifyValue(int num) {
+      num = 20; // Changing the value of the copy
+      System.out.println("Inside modify Value: " + num);
+    }
+
+    public static void modifyObject(Employee employee) {  
+        employee.setName("Neeraj"); // Modifying the object
+        System.out.println("Inside modify Object: " + employee);
+  }
+
+
+}
+```
+
+### Q.3 Why Pointers are not used in Java?
+- They are unsafe
+- Pointers are not used in Java primarily because they introduce complexities like memory management issues and security vulnerabilities, which Java aims to avoid.
+- JVM is responsible for memory management, thus in order to avoid direct access to memory by user, pointer are discouraged in java.
 
 ## Integer
 
