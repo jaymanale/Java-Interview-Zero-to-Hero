@@ -76,6 +76,8 @@ public class Main {
 | 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
 | 8               | [ ✅ Find the largest/Max number from ArrayList](#integer-example-8)           |
 | 9               | [ ✅ find the Smallest/Min number from ArrayList](#integer-example-9)          |
+| 9               | [ ✅ find the number which occur more than once](#integer-example-10)          |
+| 9               | [ ✅ find the number along with its frequency which occur more than once](#integer-example-11)          |
 
 
 
@@ -92,6 +94,8 @@ public class Main {
 | 3               | [ ✅ Converts each name into an LOWERCASE string from ArrayList](#string-example-3) |
 | 4               | [ ✅ Sort name from ArrayList in Ascending Order](#string-example-4)                |
 | 5               | [ ✅ Sort name from ArrayList in Descending Order](#string-example-5)               |
+| 5               | [ ✅ find the character which occur more than once](#string-example-6)               |
+| 5               | [ ✅ find the character with its frequency which occur more than once](#string-example-7)               |
 
 <div>
     <b><a href="#table-of-contents">👆 Back To Top</a></b>
@@ -363,6 +367,61 @@ public class IntegerListStreamExample {
 }
 ```
 
+
+#### Integer Example 10
+>find the number which occur more than once
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+       int[] nums = {1,2,3,4,5,2,3,4,5,7,3};
+
+//  Example: 10 -> find the number which occur more than once
+// Expected Output : //[2, 3, 4, 5]
+        Set<Integer> Output = Arrays.stream(nums)
+        .boxed()
+        .collect(Collectors.groupingBy(num -> num, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(num -> num.getValue() > 1)
+        .map(Entry::getKey)
+        .collect(Collectors.toSet());
+    System.out.println(Output); //[2, 3, 4, 5]
+
+// OUTPUT : 👇        
+// Smallest number -> //[2, 3, 4, 5]
+    }
+}
+```
+
+#### Integer Example 11
+>find the number along with its frequency which occur more than once
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+       int[] nums = {1,2,3,4,5,2,3,4,5,7,3};
+
+//  Example: 11 -> find the number along with its frequency which occur more than once
+// Expected Output : //{2=2, 3=3, 4=2, 5=2}
+         Map<Integer, Long> Output = Arrays.stream(nums)
+        .boxed()
+        .collect(Collectors.groupingBy(num -> num, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(num -> num.getValue() > 1)
+        .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
+
+        System.out.println(Output);
+
+// OUTPUT : 👇        
+// Smallest number -> //{2=2, 3=3, 4=2, 5=2}
+    }
+}
+```
+
 <div align="right">
     <b><a href="#integer">👆 Back To Integer</a></b>
 </div>
@@ -505,6 +564,65 @@ public class StringListStreamExample {
 
 // OUTPUT : 👇        
 // Names in Descending order -> [Sham, Ram, Neha, Neeraj, Karan, John, Ajay]
+
+    }
+}
+```
+
+
+#### String Example 6
+>find the character which occur more than once
+```java
+public class StringListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+       String str = "abdbeebddd";
+
+// Example: 5 -> Sort name from ArrayList in Descending Order
+// Expected Output : // [b, d, e]
+
+           Set<String> collect1 = Arrays.stream(str.split(""))
+        .collect(Collectors.groupingBy(ch -> ch, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(entry -> entry.getValue() > 1)
+        .map(Entry::getKey)
+        .collect(Collectors.toSet());
+    System.out.println(collect1); // [b, d, e]
+
+// OUTPUT : 👇        
+// [b, d, e]
+
+    }
+}
+```
+
+
+
+#### String Example 7
+>find the character with its frequency which occur more than once
+```java
+public class StringListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+       String str = "abdbeebddd";
+
+// Example: 5 -> Sort name from ArrayList in Descending Order
+// Expected Output : // {b=3, d=4, e=2}
+
+    Map<String, Long> collect = Arrays.stream(str.split(""))
+        .collect(Collectors.groupingBy(ch -> ch, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(ch -> ch.getValue() > 1)
+        .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
+
+    System.out.println(collect); // {b=3, d=4, e=2}
+
+// OUTPUT : 👇        
+// {b=3, d=4, e=2}
 
     }
 }
