@@ -76,8 +76,9 @@ public class Main {
 | 7               | [ ✅ Sum of all given number in ArrayList](#integer-example-7)                 |
 | 8               | [ ✅ Find the largest/Max number from ArrayList](#integer-example-8)           |
 | 9               | [ ✅ find the Smallest/Min number from ArrayList](#integer-example-9)          |
-| 9               | [ ✅ find the number which occur more than once](#integer-example-10)          |
-| 9               | [ ✅ find the number along with its frequency which occur more than once](#integer-example-11)          |
+| 10              | [ ✅ find the number which occur more than once](#integer-example-10)          |
+| 11              | [ ✅ find the number along with its frequency which occur more than once](#integer-example-11)          |
+| 12              | [ ✅ perform Multiple Operation](#integer-example-12)          |
 
 
 
@@ -418,6 +419,48 @@ public class IntegerListStreamExample {
 
 // OUTPUT : 👇        
 // Smallest number -> //{2=2, 3=3, 4=2, 5=2}
+    }
+}
+```
+
+
+#### Integer Example 12
+>Perform Multiple Operation
+```java
+public class IntegerListStreamExample {
+    public static void main(String[] args) {
+        
+// DATA
+
+    // You are given a list of lists containing integers.
+    // Create a stream to flatten the nested lists,
+    // filter out the repeated numbers ( remove duplicate number),
+    // sort in descending order,
+    // and then find the square of each distinct value.
+    // Input:
+       List<List<Integer>> nestedLists = Arrays.asList(
+        Arrays.asList(1, 2, 3),
+        Arrays.asList(3, 4, 5),
+        Arrays.asList(5, 6, 7),
+        Arrays.asList(7, 8, 9) );
+
+// Expected Output : // [81, 64, 36, 16, 4, 1]
+
+        List<Integer> result = nestedLists.stream().flatMap(List::stream)
+        .collect(Collectors.groupingBy(num -> num, Collectors.counting()))
+        .entrySet()
+        .stream()
+        .filter(entry -> entry.getValue() == 1)
+        .map(Entry::getKey)
+        .sorted((a, b) -> b - a)
+        .map(num -> num * num)
+        .collect(Collectors.toList());
+    
+    System.out.println(result);
+
+// OUTPUT : 👇        
+//  [81, 64, 36, 16, 4, 1]
+
     }
 }
 ```
